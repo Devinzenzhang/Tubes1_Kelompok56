@@ -10,7 +10,7 @@ Bot yang dibuat berfokus pada pengambilan diamond. Bot ini menarget diamond mana
 
 Keterangan tambahan : bot kembali ke base bila time limit sudah mendekati jarak bot ke base. Bot dibangun dengan menggunakan bahasa pemrograman python.
 
-## Cara menggunakan bot
+## Cara memasang bot
 
 Install bot starter pack dan ikuti langkah-langkahnya https://github.com/haziqam/tubes1-IF2110-bot-starter-pack.git
 
@@ -21,3 +21,11 @@ git clone https://github.com/Devinzenzhang/Tubes1_Kelompok56
 
 replace main.py di bot starter pack dengan main.py dari repository ini (di folder src)
 tambahkan sisyphus.py ke folder tubes1-IF2110-bot-starter-pack/game/logic/
+
+## Cara menjalankan bot
+
+```
+python main.py --logic Sisyphus --email=your_email@example.com --name=your_name --password=your_password --team etimo
+```
+
+Untuk menjalankan beberapa bot ubah file run-bots.bat atau run-bots.sh
