@@ -6,6 +6,6 @@ Kelompok 56 :
 
 Pembuatan Bot untuk Permainan Diamonds dengan Algoritma Greedy
 
-Bot yang dibuat berfokus pada pengambilan diamond. Bot ini menarget diamond mana yang memiliki poin tertinggi dan setelah mendapatkan posisi diamond tersebut, bot mengecek daerah sekitarnya dalam bentuk diamond (karena pergerakkannya di dalam grid, maka daerah yang dianalisa dari diamond adalah x + y = 5). Setelah arena itu dicek dan dibandingkan dengan diamond lain yang memiliki nilai poin yang sama, bot bergerak ke tempat dimana daerah dengan diamond yang digunakan sebagai basis pengecekan areanya memiliki total poin terbanyak. Setelah itu, bot bergerak kembali ke base. 
+Bot yang dibuat berfokus pada pengambilan diamond. Bot ini menarget diamond mana yang memiliki poin tertinggi dan jarak terpendek di daerah sekitarnya dalam bentuk diamond (karena pergerakkannya di dalam grid, maka daerah yang dianalisa dari diamond adalah x + y = 5). Setelah itu bot bergerak ke diamond itu. Setelah inverntory penuh, bot bergerak kembali ke base. 
 
-Keterangan tambahan : bot kembali ke base bila time limit sudah dekat, pada waktu game sudah mencapai 50s. Bot dibangun dengan menggunakan bahasa pemrograman python.
+Keterangan tambahan : bot kembali ke base bila time limit sudah mendekati jarak bot ke base. Bot dibangun dengan menggunakan bahasa pemrograman python.
