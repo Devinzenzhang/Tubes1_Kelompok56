@@ -29,8 +29,13 @@ class Kelompok56(BaseLogic):
         else:
             self.goal_position = None
             diamond_list = board.diamonds
+
+            # cari diamonds di jarak <= 5
             diamond_list_focus = [d for d in diamond_list if (self.calc_distance(current_position, d.position) <= 5)]
+            # kalau tidak ada radiusnya dibesarkan
             if (len(diamond_list_focus) == 0): diamond_list_focus = [d for d in diamond_list if (self.calc_distance(current_position, d.position) <= 10)]
+
+            # target diamond yang poinnya paling banyak dan jarak terpendek (tidak mempertimbangkan teleporter)
             target = None
             for i in range (len(diamond_list_focus)):
                 if i == 0:
@@ -39,6 +44,7 @@ class Kelompok56(BaseLogic):
                     target = diamond_list_focus[i]
                 elif ((self.calc_distance(current_position, diamond_list_focus[i].position) < self.calc_distance(current_position, target.position)) and (diamond_list_focus[i].properties.points == target.properties.points)):
                     target = diamond_list_focus[i]
+
             if target:
                 self.goal_position = target.position
 
@@ -52,6 +58,8 @@ class Kelompok56(BaseLogic):
             )
             if ((delta_x == 0) and (delta_y == 0)): self.goal_position = None
         if not self.goal_position:
+            # kode dari yang bot starter pack random lollll
+            # kadang masih bisa ke sini kalau waktunya hampir habis (jalan-jalan disekitar base)
             # Roam around
             delta = self.directions[self.current_direction]
             delta_x = delta[0]
